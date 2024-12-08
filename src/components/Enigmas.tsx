@@ -13,7 +13,7 @@ const ENIGMAS = [
   {
     id: 2,
     question: "Vite ! il nous faut le nom des des puits de ventilation dans le bon ordre",
-    answer: 'AAAA',
+    answer: 'ABCD',
   },
   {
     id: 3,
