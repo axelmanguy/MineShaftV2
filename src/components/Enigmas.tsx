@@ -7,24 +7,24 @@ const ENIGMAS = [
   {
     id: 1,
     question:
-      'I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. I have roads, but no cars. What am I?',
-    answer: 'map',
+      "Un mot écrit d'une main tremblante : <<La pompe est votre salut. Assemblez les engrenages avant qu’il ne soit trop tard, tout ce que je sais c'est qu'ensemble ils forment le plus grand danger de la mine.>> Le temps presse. Les engrenages doivent s'imbriquer parfaitement pour remettre en marche la pompe et stopper la montée des eaux.",
+    answer: 'grisou',
   },
   {
     id: 2,
-    question: 'The more you take, the more you leave behind. What am I?',
-    answer: 'footsteps',
+    question: "Vite ! il nous faut le nom des des puits de ventilation dans le bon ordre",
+    answer: 'AAAA',
   },
   {
     id: 3,
-    question: 'Complete the sequence carved into the wall',
-    answer: '1416182022000',
+    question: 'Les numeros de jetons des camarades tombés au combats ouvre la porte',
+    answer: '0123456789100',
     type: 'number-sequence',
   },
   {
     id: 4,
-    question: 'What breaks yet never falls, and what falls yet never breaks?',
-    answer: 'day and night',
+    question: " << T2 111 2 4 >> Des hommes poussaient, une armée noire, vengeresse, qui germait lentement dans les sillons, grandissant pour les récoltes du siècle futur, et dont la germination allait faire bientôt éclater la terre",
+    answer: 'rouge',
   },
 ];
 
@@ -116,7 +116,7 @@ export const Enigmas: React.FC = () => {
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
               className="w-full p-3 bg-zinc-800/90 rounded-lg text-white border border-zinc-700 focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 outline-none"
-              placeholder="Enter your answer..."
+              placeholder="Votre reponse"
             />
             {attempts > 0 && (
               <p className="text-red-500">

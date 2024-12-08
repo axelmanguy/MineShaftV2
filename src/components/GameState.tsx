@@ -8,8 +8,8 @@ interface GameStateProps {
 
 export const GameState: React.FC<GameStateProps> = ({ type, onRestart, onContinue }) => {
   const images = {
-    success: 'https://images.unsplash.com/photo-1599508704512-2f19efd1e35f?auto=format&fit=crop&w=1920',
-    failure: 'https://images.unsplash.com/photo-1635774855317-edf3ee4463db?auto=format&fit=crop&w=1920'
+    success: '/public/inthedepth1.jpg',
+    failure: '/public/cougrisou2.jpg'
   };
 
   return (
@@ -27,8 +27,8 @@ export const GameState: React.FC<GameStateProps> = ({ type, onRestart, onContinu
         </h2>
         <p className="text-xl mb-8">
           {type === 'success' 
-            ? 'You solved the enigma. Ready for the next challenge?' 
-            : 'The mine is collapsing! Better try again...'}
+            ? "Camarrades ! L'enigme a été resolue, poursuivons notre quete de liberté " 
+            : "GAZ ! c'est le coup de grisou, la mine s'effondre sur nous"}
         </p>
         <div className="space-x-4">
           {type === 'failure' && (
