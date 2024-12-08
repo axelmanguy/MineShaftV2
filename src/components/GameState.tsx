@@ -23,12 +23,12 @@ export const GameState: React.FC<GameStateProps> = ({ type, onRestart, onContinu
       
       <div className="relative z-10 text-center text-white">
         <h2 className="text-4xl font-bold mb-8">
-          {type === 'success' ? 'Well Done!' : 'Oh no...'}
+          {type === 'success' ? 'Barvo ! ' : 'GAZ ! '}
         </h2>
         <p className="text-xl mb-8">
           {type === 'success' 
             ? "Camarrades ! L'enigme a été resolue, poursuivons notre quete de liberté " 
-            : "GAZ ! c'est le coup de grisou, la mine s'effondre sur nous"}
+            : "C'est le coup de grisou, la mine s'effondre sur nous"}
         </p>
         <div className="space-x-4">
           {type === 'failure' && (
