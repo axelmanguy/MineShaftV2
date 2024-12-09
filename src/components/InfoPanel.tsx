@@ -10,26 +10,27 @@ Travailleurs, le temps presse. La survie de vos camarades et l’avenir de la lu
 
 export const InfoPanel: React.FC<{ onStart: () => void }> = ({ onStart }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 text-white p-8 z-40">
-      <div className="max-w-2xl w-full bg-zinc-900/90 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
-        <h1 className="text-4xl font-bold mb-6">Entrez dans la mine</h1>
-        <div className="prose prose-invert mb-8">
-          <p className="text-lg leading-relaxed">{STORY_TEXT}</p>
-          <div className="mt-6 space-y-4">
-            <h3 className="text-xl font-semibold">Instructions:</h3>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Faites descendre l'ascenceur</li>
-              <li>Resolvez les enigmes</li>
-              <li>Il y a 3 tentatives par enigme</li>
-              <li>Attention, en cas d'echec répétés la revolution meure avec vous</li>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 text-white p-4 sm:p-8 z-40 overflow-y-auto">
+      <div className="max-w-2xl w-full bg-zinc-900/90 backdrop-blur-sm p-4 sm:p-8 rounded-lg shadow-2xl my-4 sm:my-0">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">Welcome to Blackwood Mine</h1>
+        <div className="prose prose-invert mb-6 sm:mb-8">
+          <p className="text-base sm:text-lg leading-relaxed">{STORY_TEXT}</p>
+          <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
+            <h3 className="text-lg sm:text-xl font-semibold">Instructions:</h3>
+            <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base">
+              <li>Scroll down to descend into the mine</li>
+              <li>Watch your depth meter carefully</li>
+              <li>Solve enigmas to progress deeper</li>
+              <li>You have 3 attempts for each enigma</li>
+              <li>Be cautious - wrong answers may trigger cave-ins!</li>
             </ul>
           </div>
         </div>
         <button
           onClick={onStart}
-          className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-lg transition-colors"
+          className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors text-base sm:text-lg"
         >
-          Commencez à descendre
+          Begin the Descent
         </button>
       </div>
     </div>
