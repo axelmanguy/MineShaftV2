@@ -35,21 +35,20 @@ export const Enigmas: React.FC = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [attempts, setAttempts] = useState(0);
   const [showInfo, setShowInfo] = useState(true);
-
+  
   const handleSubmit = (e: React.FormEvent | string) => {
     if (e && typeof e !== 'string') {
       e.preventDefault();
     }
-    const currentAnswer =
-      typeof e === 'string' ? e : answer.toLowerCase().trim();
+    const currentAnswer = typeof e === 'string' ? e : answer.toLowerCase().trim();
     const expectedAnswer = ENIGMAS[currentEnigma].answer;
-
+    
     if (currentAnswer === expectedAnswer) {
       setShowSuccess(true);
       setAnswer('');
       setAttempts(0);
     } else {
-      setAttempts((prev) => prev + 1);
+      setAttempts(prev => prev + 1);
       if (attempts >= 2) {
         setShowFailure(true);
       }
@@ -66,19 +65,23 @@ export const Enigmas: React.FC = () => {
   };
 
   const handleContinue = () => {
-    setCurrentEnigma((prev) => prev + 1);
+    setCurrentEnigma(prev => prev + 1);
     setShowSuccess(false);
     setShowInfo(true);
   };
-
+  
   if (currentEnigma >= ENIGMAS.length) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 text-white p-8 z-30">
+      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 text-white p-4 sm:p-8 z-30">
         <div className="max-w-lg text-center">
-          <h2 className="text-3xl font-bold mb-4">Barvo !</h2>
-          <p className="text-xl">
-            Vous vous etes echapés de la mines !
-          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Congratulations!</h2>
+          <p className="text-lg sm:text-xl mb-8">You've escaped the mine. Well done, explorer!</p>
+          <button
+            onClick={handleRestart}
+            className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
+          >
+            Start New Adventure
+          </button>
         </div>
       </div>
     );
@@ -93,20 +96,15 @@ export const Enigmas: React.FC = () => {
   }
 
   if (showInfo) {
-    return (
-      <EnigmaInfo
-        enigmaIndex={currentEnigma}
-        onContinue={() => setShowInfo(false)}
-      />
-    );
+    return <EnigmaInfo enigmaIndex={currentEnigma} onContinue={() => setShowInfo(false)} />;
   }
-
+  
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 text-white p-8 z-30">
-      <div className="max-w-4xl w-full bg-zinc-900/90 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
-        <h2 className="text-2xl font-bold mb-6">Enigma {currentEnigma + 1}</h2>
-        <p className="text-xl mb-8">{ENIGMAS[currentEnigma].question}</p>
-
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 text-white p-4 sm:p-8 z-30">
+      <div className="w-full max-w-4xl bg-zinc-900/90 backdrop-blur-sm p-4 sm:p-8 rounded-lg shadow-2xl">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Enigma {currentEnigma + 1}</h2>
+        <p className="text-lg sm:text-xl mb-6 sm:mb-8">{ENIGMAS[currentEnigma].question}</p>
+        
         {ENIGMAS[currentEnigma].type === 'number-sequence' ? (
           <NumberSequence onSubmit={handleSubmit} attempts={attempts} />
         ) : (
@@ -116,11 +114,11 @@ export const Enigmas: React.FC = () => {
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
               className="w-full p-3 bg-zinc-800/90 rounded-lg text-white border border-zinc-700 focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 outline-none"
-              placeholder="Votre reponse"
+              placeholder="Enter your answer..."
             />
             {attempts > 0 && (
-              <p className="text-red-500">
-                Mauvaise reponse. {3 - attempts} tentatives restantes.
+              <p className="text-red-500 text-sm sm:text-base">
+                Incorrect answer. {3 - attempts} attempts remaining.
               </p>
             )}
             <button

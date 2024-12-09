@@ -36,14 +36,14 @@ export const NumberSequence: React.FC<NumberSequenceProps> = ({ onSubmit, attemp
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-start">
-      <div className="w-full md:w-2/3">
-        <div className="grid grid-cols-13 gap-2 mb-6">
+    <div className="flex flex-col gap-6">
+      <div className="w-full overflow-x-auto pb-2">
+        <div className="grid grid-cols-13 gap-1 sm:gap-2 min-w-max">
           {digits.map((digit, index) => (
             <div
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`h-12 w-full border-2 rounded-md flex items-center justify-center text-xl font-bold cursor-pointer
+              className={`h-8 sm:h-12 w-8 sm:w-12 border-2 rounded-md flex items-center justify-center text-base sm:text-xl font-bold cursor-pointer
                 ${index === currentIndex ? 'border-amber-500' : 'border-zinc-700'}
                 ${digit ? 'bg-zinc-800' : 'bg-zinc-900'}`}
             >
@@ -51,16 +51,15 @@ export const NumberSequence: React.FC<NumberSequenceProps> = ({ onSubmit, attemp
             </div>
           ))}
         </div>
-        <div className="text-sm text-amber-400 mb-4">
-          Complete the sequence: 2-4-6-8-10-12-?
-        </div>
-        {attempts > 0 && (
-          <p className="text-red-500 mb-4">
-            Incorrect sequence. {3 - attempts} attempts remaining.
-          </p>
-        )}
       </div>
-      
+      <div className="text-sm text-amber-400 mb-2">
+        Complete the sequence: 2-4-6-8-10-12-?
+      </div>
+      {attempts > 0 && (
+        <p className="text-red-500 text-sm sm:text-base mb-2">
+          Incorrect sequence. {3 - attempts} attempts remaining.
+        </p>
+      )}
       <NumberKeypad
         onDigitClick={handleDigitInput}
         onDelete={handleDelete}

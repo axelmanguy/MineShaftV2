@@ -4,22 +4,22 @@ import { useScrollPosition } from '../hooks/useScrollPosition';
 const MINE_LAYERS = [
   {
     depth: 0,
-    image: '/public/mine_entrance.jpg',
+    image: '/mine_entrance.jpg',
     text: 'Entrée de la mine - 1873'
   },
   {
     depth: 1,
-    image: '/public/depth2.jpg',
+    image: '/depth2.jpg',
     text: 'Les tunnles superieurs'
   },
   {
     depth: 2,
-    image: '/public/finaldepth.jpg',
+    image: '/finaldepth.jpg',
     text: 'Le vieux filon'
   },
   {
     depth: 3,
-    image: '/public/depth3.jpg',
+    image: '/depth3.jpg',
     text: 'Le fond'
   }
 ];

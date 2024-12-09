@@ -8,8 +8,8 @@ interface GameStateProps {
 
 export const GameState: React.FC<GameStateProps> = ({ type, onRestart, onContinue }) => {
   const images = {
-    success: '/public/inthedepth1.jpg',
-    failure: '/public/cougrisou2.jpg'
+    success: '/inthedepth1.jpg',
+    failure: '/cougrisou2.jpg'
   };
 
   return (
