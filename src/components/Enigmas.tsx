@@ -8,8 +8,8 @@ const ENIGMAS = [
     id: 1,
     question:
     `Un mot écrit d'une main tremblante : 
-    "La pompe est votre salut. Assemblez les engrenages avant qu’il ne soit trop tard, la solution est protégée de l'eau dans une boite dorée " 
-    Le temps presse. Les engrenages doivent s'imbriquer parfaitement pour remettre en marche la pompe et stopper la montée des eaux.`,
+    "La pompe est votre salut. Assemblez les engrenages avant qu’il ne soit trop tard, la solution est protégée dans une boite dorée au bord de l'eau qui monte. " 
+    Le temps presse. Les engrenages permettent de dechiffrer le code pour remettre en marche la pompe et stopper la montée des eaux.`,
     answer: 'grisou',
   },
   {

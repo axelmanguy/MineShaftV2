@@ -7,7 +7,7 @@ const ENIGMA_INFO = [
     L'eau s’infiltre par les parois, formant des flaques grandissantes.
     Soudain, un cri retentit : " L'ascenseur ! Il est remonté sans nous ! ". 
     Pris de panique, vous apercevez un atelier abandonné où une vieille pompe rouillée repose au milieu de pièces éparpillées.
-    Une petite boite dorée contient de quoi la reparer`,
+    Une petite boite dorée au bord de l'eau qui monte contient le code à dechiffrer pour la reparer`,
     depth: "250 metres"
   },
   {
