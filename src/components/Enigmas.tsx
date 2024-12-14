@@ -7,23 +7,27 @@ const ENIGMAS = [
   {
     id: 1,
     question:
-      "Un mot écrit d'une main tremblante : <<La pompe est votre salut. Assemblez les engrenages avant qu’il ne soit trop tard, tout ce que je sais c'est qu'ensemble ils forment le plus grand danger de la mine.>> Le temps presse. Les engrenages doivent s'imbriquer parfaitement pour remettre en marche la pompe et stopper la montée des eaux.",
+    `Un mot écrit d'une main tremblante : 
+    "La pompe est votre salut. Assemblez les engrenages avant qu’il ne soit trop tard, la solution est protégée de l'eau dans une boite dorée " 
+    Le temps presse. Les engrenages doivent s'imbriquer parfaitement pour remettre en marche la pompe et stopper la montée des eaux.`,
     answer: 'grisou',
   },
   {
     id: 2,
-    question: "Vite ! il nous faut le nom des des puits de ventilation dans le bon ordre",
-    answer: "abcd",
+    question: "Livrez le nom de famille du traitre, il est marqué du rouge du sang des travailleurs",
+    answer: "chabert",
   },
   {
     id: 3,
-    question: 'Les numeros de jetons des camarades tombés au combats ouvre la porte',
-    answer: '0123456789100',
+    question: 'Vous cherchez le code de la porte, la solution est dans le menu',
+    answer: '44144418914',
     type: 'number-sequence',
   },
   {
     id: 4,
-    question: " << T2 111 2 4 >> Des hommes poussaient, une armée noire, vengeresse, qui germait lentement dans les sillons, grandissant pour les récoltes du siècle futur, et dont la germination allait faire bientôt éclater la terre",
+    question: `"Là, au second volet de cette fresque, à la page cent-onze, ligne deux, le quatrieme mot vous ouvre la voie"
+    Au fond de la piece 4 leviers, la couleur de celui qui ouvre la voie vers la sortie est la reponse à cette derniere enigme
+    `,
     answer: 'rouge',
   },
 ];

@@ -10,15 +10,15 @@ const MINE_LAYERS = [
   {
     depth: 1,
     image: '/depth2.jpg',
-    text: 'Les tunnles superieurs'
+    text: 'Les tunnels superieurs'
   },
   {
-    depth: 2,
+    depth: 3,
     image: '/finaldepth.jpg',
     text: 'Le vieux filon'
   },
   {
-    depth: 3,
+    depth: 5,
     image: '/depth3.jpg',
     text: 'Le fond'
   }
