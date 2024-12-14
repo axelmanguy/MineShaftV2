@@ -36,7 +36,7 @@ export const GameState: React.FC<GameStateProps> = ({ type, onRestart, onContinu
               onClick={onRestart}
               className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
             >
-              Restart
+              Recommencer
             </button>
           )}
           {type === 'success' && (
@@ -44,7 +44,7 @@ export const GameState: React.FC<GameStateProps> = ({ type, onRestart, onContinu
               onClick={onContinue}
               className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
             >
-              Continue
+              Continuer
             </button>
           )}
         </div>
