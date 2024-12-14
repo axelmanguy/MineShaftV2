@@ -26,9 +26,7 @@ const ENIGMAS = [
   {
     id: 4,
     question: `
-    "son titre résonne comme une promesse : un souffle nouveau, une saison de renouveau, celle qui suit l’hiver."
-    "Là, au second volet de cette fresque, à la page cent-onze, ligne deux, le quatrieme mot vous ouvre la voie"
-    Au fond de la piece 4 leviers, la couleur de celui qui ouvre la voie vers la sortie est la reponse à cette derniere enigme
+    trouvez ce mot dans un des livres de la bibliothèque.
     `,
     answer: 'rouge',
   },
