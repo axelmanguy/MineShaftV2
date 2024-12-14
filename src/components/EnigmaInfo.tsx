@@ -17,7 +17,7 @@ const ENIGMA_INFO = [
       Vous avancez dans une galerie oubliée vers l'ancienne salle des casiers
       Les murs sont noircis par des décennies de poussière et d’oubli. 
       Face à vous, un tableau de bois usé, couvert de poussières. Des crochets rouillés pendent tristement,
-      mais au sol, éparpillés, des jetons métalliques portant des noms et des numéros et un extrait de journal           
+      mais au sol, éparpillés, des jetons métalliques portant des noms et des numéros et un extrait de journal de la derniere grève brutallement reprimée.          
       Reconstituez leurs vies, leurs noms, leurs numéros. Vous saurez alors qui ils étaient.
       Vous devez demasquer le traitre d'alors.
     `,
