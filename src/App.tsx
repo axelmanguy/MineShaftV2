@@ -11,7 +11,7 @@ import { useScrollPosition } from './hooks/useScrollPosition';
 function App() {
   const [showInfo, setShowInfo] = useState(true);
   const scrollPosition = useScrollPosition();
-  const showEnigmas = scrollPosition > window.innerHeight * 20;
+  const showEnigmas = scrollPosition > window.innerHeight * 13;
   
   return (
     <div className="relative">

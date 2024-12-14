@@ -7,7 +7,7 @@ interface NumberSequenceProps {
 }
 
 export const NumberSequence: React.FC<NumberSequenceProps> = ({ onSubmit, attempts }) => {
-  const [digits, setDigits] = useState<string[]>(Array(13).fill(''));
+  const [digits, setDigits] = useState<string[]>(Array(11).fill(''));
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleDigitInput = (digit: string) => {
@@ -15,7 +15,7 @@ export const NumberSequence: React.FC<NumberSequenceProps> = ({ onSubmit, attemp
       const newDigits = [...digits];
       newDigits[currentIndex] = digit;
       setDigits(newDigits);
-      setCurrentIndex(prev => Math.min(prev + 1, 12));
+      setCurrentIndex(prev => Math.min(prev + 1, 10));
     }
   };
 
@@ -30,7 +30,7 @@ export const NumberSequence: React.FC<NumberSequenceProps> = ({ onSubmit, attemp
 
   const handleSubmit = () => {
     const answer = digits.join('');
-    if (answer.length === 13) {
+    if (answer.length === 11) {
       onSubmit(answer);
     }
   };
@@ -53,11 +53,11 @@ export const NumberSequence: React.FC<NumberSequenceProps> = ({ onSubmit, attemp
         </div>
       </div>
       <div className="text-sm text-amber-400 mb-2">
-        Complete the sequence: 2-4-6-8-10-12-?
+        Completez la sequence du menu :
       </div>
       {attempts > 0 && (
         <p className="text-red-500 text-sm sm:text-base mb-2">
-          Incorrect sequence. {3 - attempts} attempts remaining.
+          Mauvaise sequence. {3 - attempts} tentatives restantes.
         </p>
       )}
       <NumberKeypad
