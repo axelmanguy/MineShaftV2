@@ -49,15 +49,11 @@ const ENIGMA_INFO = [
     description: `Lorsque le dernier chiffre trouve sa place, vous ouvrez la porte du casier.
     Il s'agit en fait d'un passage vers une piece secrete où les precedents meneurs de la greve preparait la revolution
     A l’intérieur, des étagères regorgent de livres soigneusement alignés.
-    Sur une table, un carnet à la couverture écornée attire votre attention : 
-    Carnet des Tréfonds – 14 septembre 1887
-    Alors que la mine semble vouloir nous engloutir, une lueur inattendue nous parvient.
-    Une phrase mystérieuse de Mme de la tour me revient en memoire :
-    "Cherchez dans l’œuvre où la mine devient symbole, où la lutte jaillit des entrailles de la terre.
-    Là, au second volet de cette fresque, à la page cent-onze, ligne deux, le quatrieme mot vous ouvre la voie"
-
-    Nous savons de quel livre il s’agit, car son titre résonne comme une promesse : un souffle nouveau, une saison de renouveau, celle qui suit l’hiver.
-    Si quelqu’un lit ce carnet, suivez cette piste. Le mot que vous trouverez sera peut-être la clé qui ouvrira les portes de cette prison.`,
+    Au fond de la salle, une grille qui mène au puits d'aération. Quatre leviers pourraient l'ouvrir, mais trois d'entre eux mènent à l'explosion.
+    Vous savez qu'il vous faut trouver un mot, un mot qui décrit le levier sur lequel vous devrez tirer pour déverouiller la grille.
+    Sur une table, une boite métallique de la dernière Exposition Universelle attire votre attention ;
+    elle contient les instructions de Mme de la Tour pour trouver ce mot dans un des livres de la bibliothèque.
+    `,
     depth: "600 metres"
   }
 ];
